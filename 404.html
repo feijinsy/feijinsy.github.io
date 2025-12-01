@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重定向中 - 一乐工具箱</title>
+    <script>
+        // 保存当前路径并重定向到应用首页
+        const currentPath = window.location.pathname + window.location.search;
+        sessionStorage.setItem('redirect', currentPath);
+
+        // 用户页面直接重定向到根目录
+        window.location.replace('/');
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+        <h1>页面重定向中...</h1>
+        <p>如果页面没有自动跳转，请<a href="/">点击这里返回首页</a></p>
+        <p style="color: #666; font-size: 14px;">正在处理单页应用路由...</p>
+    </div>
+</body>
+
+</html>
